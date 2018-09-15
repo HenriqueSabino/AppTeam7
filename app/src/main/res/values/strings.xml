@@ -4,5 +4,28 @@
     <string name="txt_email">Email</string>
     <string name="txt_senha">Senha</string>
     <string name="btt_login">Entrar</string>
+    <string name="btt_cadastrar">Cadastrar</string>
+    <string name="spn_competecia">Competência</string>
+    <string name="spn_areaInteresse">Area de Interesse</string>
+    <string name="txt_confirmarSenha">Confirmar Senha</string>
+    <string name="txt_nomeCompleto">Nome Completo</string>
     <string name="txt_cadastrar">Cadastrar</string>
+    <string-array name="list_areaInteresse">
+        <item>Biológicas</item>
+        <item>Humanas</item>
+        <item>Exatas</item>
+        <item>Sociais</item>
+    </string-array>
+    <string-array name="list_competencia">
+        <item>Análise</item>
+        <item>Cálculo</item>
+        <item>Criatividade</item>
+        <item>Construção</item>
+        <item>Desenho/Artes</item>
+        <item>Escrita</item>
+        <item>Linguagem</item>
+        <item>Oralidade</item>
+        <item>Programação</item>
+        <item>Robótica</item>
+    </string-array>
 </resources>

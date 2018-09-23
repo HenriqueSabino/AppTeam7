@@ -1,8 +1,12 @@
 package com.example.hsabi.appteam71;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void CriarConta(View view){
-        setContentView(R.layout.f_cadastro);
+        Intent i = new Intent(getApplicationContext(), FCadastro.class);
+        startActivity(i);
     }
 }

@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".FCadastro">
 
     <EditText
         android:id="@+id/senha"
@@ -32,7 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="157dp"
-        android:hint="@string/spn_areaInteresse" />
+        android:hint="@string/spn_areaInteresse"/>
 
     <Spinner
         android:id="@+id/spn_competencias"
@@ -72,6 +73,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="12dp"
-        android:text="@string/btt_cadastrar" />
+        android:text="@string/btt_cadastrar"
+        android:onClick="OnClick"/>
 
 </RelativeLayout>

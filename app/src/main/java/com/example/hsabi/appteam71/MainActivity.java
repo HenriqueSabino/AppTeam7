@@ -22,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void TrocarSenha(View view){
+        Intent myIntent = new Intent(getApplicationContext(), TrocarSenha.class);
+        startActivity(myIntent);
+    }
+
     public void Entrar (View view){
         try{
             AccountsManager manager = new AccountsManager(getFilesDir(), getApplicationContext());
@@ -29,11 +34,17 @@ public class MainActivity extends AppCompatActivity {
             String senha = ((EditText) findViewById(R.id.txt_senha)).getText().toString();
 
             User temp = manager.FindByEmail(email);
-            if (temp.CheckLogin(email, senha)){
-                Toast.makeText(getApplicationContext(), "OK", Toast.LENGTH_LONG).show();
+
+            if (temp == null){
+                Toast.makeText(getApplicationContext(), "Usuário não encontrado", Toast.LENGTH_LONG).show();
+            }
+            else if (temp.CheckLogin(email, senha)){
+                Toast.makeText(getApplicationContext(), "Logado", Toast.LENGTH_LONG).show();
+                Intent myIntent = new Intent(getApplicationContext(), Inicial.class);
+                startActivity(myIntent);
             }
             else{
-                Toast.makeText(getApplicationContext(), "Erouuu!!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Senha incorreta", Toast.LENGTH_LONG).show();
             }
         }
         catch (Exception e){

@@ -1,7 +1,7 @@
 package com.example.hsabi.appteam71;
 
-import android.app.Application;
 import android.content.Context;
+import android.os.Message;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,9 +16,7 @@ public class AccountsManager {
         this.directory = directory;
         this.context = context;
         File accounts = new File(this.directory + "/accounts.acc");
-
         if (accounts.exists()){
-            Toast.makeText(this.context, "achou",Toast.LENGTH_LONG);
             FileInputStream fis = new FileInputStream(accounts);
             ObjectInputStream ois = new ObjectInputStream(fis);
 
@@ -27,32 +25,34 @@ public class AccountsManager {
         else{
             accounts.createNewFile();
             users = new ArrayList<>();
+            SaveAccounts();
         }
     }
 
-    void SaveAccounts() throws Exception{
+    public void SaveAccounts() throws IOException{
         File accounts = new File(this.directory + "/accounts.acc");
+        accounts.delete();
+        accounts.createNewFile();
         FileOutputStream fos = new FileOutputStream(accounts);
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(users);
     }
 
-    void Cadastrar (String userName, String senha, String email, String area, String competencia){
+    User Cadastrar (String userName, String senha, String email, String area, String competencia){
         User temp = new User (userName,senha,email,area,competencia);
         users.add(temp);
         try {
             SaveAccounts();
+            return temp;
         }
         catch(Exception e){
-            Toast.makeText(this.context, "ERROR no metodo cadastro: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(this.context, "ERROR: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            return null;
         }
     }
 
     User FindByEmail (String email){
         for (int i = 0; i < users.size(); i++) {
-
-            System.out.println(users.get(i).toString());
-
             if (users.get(i).email.equals(email.toString())){
                 return users.get(i);
             }

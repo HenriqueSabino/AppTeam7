@@ -7,8 +7,8 @@ public class User implements Serializable{
     public String userName;
     private String password;
     public String email;
-    private String area;
-    private String competencia;
+    public String area;
+    public String competencia;
 
     User(String userName, String password, String email, String area, String competencia){
         this.userName = userName;
@@ -16,15 +16,6 @@ public class User implements Serializable{
         this.email = email;
         this.area = area;
         this.competencia = competencia;
-    }
-
-    User(String user){
-        String[] userInfo = user.split("/");
-        this.userName = userInfo[0];
-        this.password = userInfo[1];
-        this.email = userInfo[2];
-        this.area = userInfo[3];
-        this.competencia = userInfo[4];
     }
 
     public boolean CheckLogin(String entry, String password){
@@ -35,6 +26,10 @@ public class User implements Serializable{
         else
             return false;
         return false;
+    }
+
+    public void TrocarSenha(String newPassword){
+        password = newPassword;
     }
 
     @Override

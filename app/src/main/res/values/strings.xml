@@ -9,15 +9,21 @@
     <string name="spn_areaInteresse">Area de Interesse</string>
     <string name="txt_confirmarSenha">Confirmar Senha</string>
     <string name="txt_nomeCompleto">Nome Completo</string>
-    <string name="txt_cadastrar">Cadastrar</string>
+    <string name="txt_cadastrar"><u>Cadastrar</u></string>
+    <string name="btt_trocarSenha"><u>Esqueci minha senha</u></string>
+    <string name="txt_bemVindo">/*Tela Inicial*/</string>
+    <string name="txt_senhaNova">Senha nova</string>
+    <string name="title_TrocarSenha">Trocar Senha</string>
+    <string name="btt_Trocar">Trocar</string>
     <string-array name="list_areaInteresse">
-        <item> </item>
+        <item>Area de Interesse</item>
         <item>Biológicas</item>
         <item>Humanas</item>
         <item>Exatas</item>
         <item>Sociais</item>
     </string-array>
     <string-array name="list_competencia">
+        <item>Competência</item>
         <item>Análise</item>
         <item>Cálculo</item>
         <item>Criatividade</item>

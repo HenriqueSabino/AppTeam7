@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="232dp"
+        android:layout_marginBottom="242dp"
         android:ems="10"
         android:hint="@string/txt_senha"
         android:inputType="textPassword" />
@@ -45,9 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="137dp"
-        android:text="@string/btt_login"
-        android:onClick="Entrar"/>
+        android:layout_marginBottom="77dp"
+        android:onClick="Entrar"
+        android:text="@string/btt_login" />
 
     <TextView
         android:id="@+id/txt_cadastrar"
@@ -55,16 +55,31 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="202dp"
-        android:autoLink="none"
+        android:layout_marginBottom="187dp"
         android:clickable="true"
-        android:linksClickable="true"
+        android:focusable="true"
         android:onClick="CriarConta"
         android:text="@string/txt_cadastrar"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         android:textStyle="normal"
-        android:visibility="visible"
-        android:focusable="true" />
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txt_trocarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="149dp"
+        android:clickable="false"
+        android:focusable="true"
+        android:onClick="TrocarSenha"
+        android:text="@string/btt_trocarSenha"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        android:textStyle="normal"
+        android:visibility="visible" />
 
 
 </RelativeLayout>
